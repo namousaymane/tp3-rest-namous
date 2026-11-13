@@ -1,0 +1,1 @@
+Je n'ai pas utiliser de l'IA pour ce TP
