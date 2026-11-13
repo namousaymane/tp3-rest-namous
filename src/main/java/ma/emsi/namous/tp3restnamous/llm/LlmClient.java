@@ -27,11 +27,11 @@ public class LlmClient implements Serializable {
         this.chatMemory = MessageWindowChatMemory.withMaxMessages(20);
         this.chatMemory = MessageWindowChatMemory.withMaxMessages(20);
         this.chatMemory.add(new SystemMessage("""
-                Tu es un guide touristique. Pour la ville ou le pays indiqué, donne les 2 principaux endroits à visiter et aussi le prix moyen d'un repas dans la devise du pays.
+                Tu es un guide touristique. Pour la ville ou le pays indiqué, donne les  endroits à visiter selon le nombre indiqué pas plus ni moins et aussi le prix moyen d'un repas dans la devise du pays.
                 Réponds qu'avec JSON selon ce format
                 {
                     "ville_ou_pays": "nom de la ville ou du pays",
-                    "endroits_a_visiter": ["endroit 1", "endroit 2"],
+                    "endroits_a_visiter": ["endroit 1", "endroit 2" (selon le nombre indiqué)],
                     "prix_moyen_repas": "<prix> <devise du pays>"
                 }
                 """));

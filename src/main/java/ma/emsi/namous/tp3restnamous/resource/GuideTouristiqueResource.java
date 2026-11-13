@@ -21,11 +21,11 @@ public class GuideTouristiqueResource {
      * @return les informations touristiques au format JSON
      */
     @GET
-    @Path("lieu/{ville_ou_pays}")
+    @Path("lieu/{ville_ou_pays}/{nombre}")
     @Produces("application/json")
     public String endroitsDeVisite(
-            @PathParam("ville_ou_pays") String villeOuPays) {
+            @PathParam("ville_ou_pays") String villeOuPays, @PathParam("nombre") int nombre) {
 
-        return llmClient.conversation(villeOuPays);
+        return llmClient.conversation(villeOuPays + nombre);
     }
 }
